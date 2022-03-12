@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Clarifai from "clarifai";
 import Particles from "react-tsparticles";
 import Navigation from './components/Navigation/Navigation.js';
 import Signin from './components/Signin/Signin.js';
@@ -11,10 +10,6 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm.js';
 import './App.css';
 
 const deployAddr = "https://obscure-everglades-16133.herokuapp.com";
-// All API parts were moved to backend
-/*const app = new Clarifai.App({ 
-  apiKey: "ab6fd89488f84c819c6bc2290348950f",
-});*/
 
 const particlesOptions = {
   fpsLimit: 30,
@@ -24,7 +19,7 @@ const particlesOptions = {
       value: 30,
       density: {
         enable: true,
-        value_area: 800,//area: 800,
+        value_area: 800,
       }
     },
 
@@ -46,7 +41,7 @@ const particlesOptions = {
       random: true
     },
 
-    lineLinked: {//links:
+    lineLinked: {
       enable: true,
       distance: 150,
       color: "#ffffff",
@@ -60,7 +55,7 @@ const particlesOptions = {
       direction: "none",
       random: false,
       straight: false,
-      out_mode: "bounce"//"out" //outMode: "bounce",
+      out_mode: "bounce"
     }
   },
 
@@ -70,11 +65,6 @@ const particlesOptions = {
       onHover: {
         enable: true,
         mode: "bubble",
-        // parallax: {
-        //   enable: true,
-        //   force: 60,
-        //   smooth: 10,
-        // },
       },
       onClick: {
         enable: false,
@@ -102,10 +92,10 @@ const particlesOptions = {
         duration: 0.4,
       },
       push: {
-        particles_nb: 4 //quantity: 4,
+        particles_nb: 4
       },
       remove: {
-        particles_nb: 2 //quantity: 2,
+        particles_nb: 2
       },
       trail: {
         delay: 0.005,
@@ -128,7 +118,6 @@ const particlesOptions = {
   retina_detect: true,
 
   background: {
-    // image: "url('https://cdn.pixabay.com/photo/2020/09/22/07/54/people-5592232_960_720.jpg')",
   }
 }
 const initialState = {
@@ -151,20 +140,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = initialState;
-    /*this.state = {
-      input:'',
-      imageUrl:'',
-      box:{},
-      route:'signin',
-      isSignedIn: false,
-      user:{
-        id: '',
-        name: '',
-        email: '',
-        entries: 0,
-        joined: ''
-      }
-    }*/
   }
 
   loadUser = (data) => {
@@ -179,11 +154,6 @@ class App extends Component {
         }
     })
   }
-  // componentDidMount(){
-  //   fetch('http://localhost:3000')
-  //     .then(response => response.json())
-  //     .then(console.log)
-  // }
 
   calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
@@ -203,25 +173,11 @@ class App extends Component {
   }
 
   onInputChange = (event) => {
-    // console.log(event.target.value);
     this.setState({input: event.target.value});
   }
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-    // All API parts were moved to backend
-    /*app.models
-    .predict(
-      Clarifai.FACE_DETECT_MODEL,
-      // Clarifai.COLOR_MODEL,
-      // THE JPG
-      // "https://i.insider.com/5d321d4ea209d3146d650b4a?width=1100&format=jpeg&auto=webp"
-      this.state.input
-      //This next fetch is included after removing the API
-    )*/
-    
-    /*fetch('http://localhost:3000/imageurl',*/
-    /*fetch('https://obscure-everglades-16133.herokuapp.com/imageurl',*/ 
     fetch(`${deployAddr}/imageurl`, 
     {
       method: 'post',
@@ -233,7 +189,6 @@ class App extends Component {
     .then(response => response.json())
     .then((response) => {
       if(response){
-        /*fetch('http://localhost:3000/image',*/ 
         fetch('https://obscure-everglades-16133.herokuapp.com/image', 
           {
             method: 'put',
@@ -249,7 +204,6 @@ class App extends Component {
           .catch(console.log)
       }
       this.displayFaceBox(this.calculateFaceLocation(response));
-      // console.log(response.outputs[0].data.regions[0].region_info.bounding_box);
     })
     .catch((err) => {
       console.log(err);
@@ -258,7 +212,6 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if (route === 'signout') {
-      /*this.setState({isSignedIn:false})*/
       this.setState(initialState)
     } else if(route==='home') {
       this.setState({isSignedIn:true})

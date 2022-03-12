@@ -1,7 +1,4 @@
 import React from 'react';
-// const deployAddr = "https://obscure-everglades-16133.herokuapp.com";
-
-// const Register = ({onRouteChange}) => {
 	class Register extends React.Component {
 	
 	constructor(props) {
@@ -26,9 +23,6 @@ import React from 'react';
 	}
 
 	onSubmitSignIn = () => {
-		// console.log(this.state);
-		/*fetch('http://localhost:3000/register',{*/
-		/*fetch(`${deployAddr}/register`,{*/
 		fetch('https://obscure-everglades-16133.herokuapp.com/register',{
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
@@ -87,7 +81,6 @@ import React from 'react';
 			    </fieldset>
 			    <div className="">
 			      <input 
-			      	/*onClick={() => onRouteChange('signin')}*/
 			      	onClick={this.onSubmitSignIn}
 			      	className="b ph3 pv2 b--white-80 white input-reset ba b--black bg-transparent grow pointer f6 dib" 
 			      	type="submit" 
@@ -96,7 +89,6 @@ import React from 'react';
 			    </div>			    
 			    <div className="mv3">
 			      <input 
-			      	/*onClick={() => onRouteChange('signin')}*/
 			      	onClick={this.onSubmitSignIn}
 			      	className="b ph3 pv2 b--white-80 white input-reset ba b--black bg-transparent grow pointer f6 dib" 
 			      	type="submit" 

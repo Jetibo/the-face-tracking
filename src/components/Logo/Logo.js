@@ -14,7 +14,6 @@ const Logo = () => {
 			    scale={1.1}
 			    transitionSpeed={2000}
 			    gyroscope={true}>
-			    {/*<div>Icons made by <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>*/}
   				<img alt='logo' src={face} />
   			</Tilt>
 		</div>

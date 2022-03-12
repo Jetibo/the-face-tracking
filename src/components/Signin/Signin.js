@@ -1,8 +1,5 @@
 import React from 'react';
 
-// const deployAddr = "https://obscure-everglades-16133.herokuapp.com";
-
-// const Signin = ({onRouteChange}) => {
 class Signin extends React.Component {
 	constructor(props) {
 		super(props);
@@ -21,9 +18,6 @@ class Signin extends React.Component {
 	}
 
 	onSubmitSignIn = () => {
-		// console.log(this.state);
-		/*fetch('http://localhost:3000/signin',{*/
-		/*fetch(`${deployAddr}/signin`,{*/
 		fetch('https://obscure-everglades-16133.herokuapp.com/signin',{
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
@@ -34,7 +28,6 @@ class Signin extends React.Component {
 		})
 		.then(response => response.json())
 		.then(data => {
-			/*if(data === 'success'){*/
 			if(data.id){
 				this.props.loadUser(data);
 				this.props.onRouteChange('home')
@@ -77,7 +70,6 @@ class Signin extends React.Component {
 			    </fieldset>
 			    <div className="">
 			      <input 
-			      	/*onClick={() => onRouteChange('home')}*/
 			      	onClick={this.onSubmitSignIn}
 			      	className="b ph3 pv2 b--white-80 white input-reset ba b--black bg-transparent grow pointer f6 dib" 
 			      	type="submit" 
