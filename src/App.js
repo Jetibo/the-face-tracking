@@ -10,7 +10,7 @@ import Rank from './components/Rank/Rank.js';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm.js';
 import './App.css';
 
-const deployAddr = "https://obscure-everglades-16133.herokuapp.com";
+// const deployAddr = "https://obscure-everglades-16133.herokuapp.com";
 // All API parts were moved to backend
 /*const app = new Clarifai.App({ 
   apiKey: "ab6fd89488f84c819c6bc2290348950f",
