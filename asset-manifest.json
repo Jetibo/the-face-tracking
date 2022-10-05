@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/the-face-tracking/static/css/main.a1cd929c.chunk.css",
+    "main.js": "/the-face-tracking/static/js/main.da60469f.chunk.js",
+    "main.js.map": "/the-face-tracking/static/js/main.da60469f.chunk.js.map",
+    "runtime-main.js": "/the-face-tracking/static/js/runtime-main.063c846a.js",
+    "runtime-main.js.map": "/the-face-tracking/static/js/runtime-main.063c846a.js.map",
+    "static/css/2.6d7c7915.chunk.css": "/the-face-tracking/static/css/2.6d7c7915.chunk.css",
+    "static/js/2.d51991c6.chunk.js": "/the-face-tracking/static/js/2.d51991c6.chunk.js",
+    "static/js/2.d51991c6.chunk.js.map": "/the-face-tracking/static/js/2.d51991c6.chunk.js.map",
+    "static/js/3.1b5987ba.chunk.js": "/the-face-tracking/static/js/3.1b5987ba.chunk.js",
+    "static/js/3.1b5987ba.chunk.js.map": "/the-face-tracking/static/js/3.1b5987ba.chunk.js.map",
+    "index.html": "/the-face-tracking/index.html",
+    "static/css/2.6d7c7915.chunk.css.map": "/the-face-tracking/static/css/2.6d7c7915.chunk.css.map",
+    "static/css/main.a1cd929c.chunk.css.map": "/the-face-tracking/static/css/main.a1cd929c.chunk.css.map",
+    "static/js/2.d51991c6.chunk.js.LICENSE.txt": "/the-face-tracking/static/js/2.d51991c6.chunk.js.LICENSE.txt",
+    "static/media/face-detection.8ffd22b9.png": "/the-face-tracking/static/media/face-detection.8ffd22b9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.063c846a.js",
+    "static/css/2.6d7c7915.chunk.css",
+    "static/js/2.d51991c6.chunk.js",
+    "static/css/main.a1cd929c.chunk.css",
+    "static/js/main.da60469f.chunk.js"
+  ]
+}
