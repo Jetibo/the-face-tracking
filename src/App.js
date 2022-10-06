@@ -9,7 +9,7 @@ import Rank from './components/Rank/Rank.js';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm.js';
 import './App.css';
 
-const deployAddr = "https://obscure-everglades-16133.herokuapp.com";
+const deployAddr = "https://aqyf9l.deta.dev";
 
 const particlesOptions = {
   fpsLimit: 30,
@@ -50,7 +50,7 @@ const particlesOptions = {
     },
 
     move: {
-      enable: true,
+      enable: false,
       speed: 1,
       direction: "none",
       random: false,
@@ -189,7 +189,7 @@ class App extends Component {
     .then(response => response.json())
     .then((response) => {
       if(response){
-        fetch('https://obscure-everglades-16133.herokuapp.com/image', 
+        fetch('https://aqyf9l.deta.dev/image', 
           {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
