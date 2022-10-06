@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/the-face-tracking/static/css/main.a1cd929c.chunk.css",
-    "main.js": "/the-face-tracking/static/js/main.dec27b59.chunk.js",
-    "main.js.map": "/the-face-tracking/static/js/main.dec27b59.chunk.js.map",
+    "main.js": "/the-face-tracking/static/js/main.79dbc8da.chunk.js",
+    "main.js.map": "/the-face-tracking/static/js/main.79dbc8da.chunk.js.map",
     "runtime-main.js": "/the-face-tracking/static/js/runtime-main.063c846a.js",
     "runtime-main.js.map": "/the-face-tracking/static/js/runtime-main.063c846a.js.map",
     "static/css/2.6d7c7915.chunk.css": "/the-face-tracking/static/css/2.6d7c7915.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.6d7c7915.chunk.css",
     "static/js/2.d51991c6.chunk.js",
     "static/css/main.a1cd929c.chunk.css",
-    "static/js/main.dec27b59.chunk.js"
+    "static/js/main.79dbc8da.chunk.js"
   ]
 }
