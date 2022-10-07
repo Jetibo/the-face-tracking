@@ -23,7 +23,7 @@ import React from 'react';
 	}
 
 	onSubmitSignIn = () => {
-		fetch('https://obscure-everglades-16133.herokuapp.com/register',{
+		fetch('https://aqyf9l.deta.dev/register',{
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
